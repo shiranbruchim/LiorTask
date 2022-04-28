@@ -53,10 +53,10 @@ const App = () => {
 
   console.log('test1');
 
-  useEffect(() => {
+  const shake = () => {
     const subscription = RNShake.addListener(() => {
       console.log('test4');
-      setIsShowLog(true);
+      setIsShowLog(!isShowLog);
       console.log('test5');
       console.log(JSON.stringify(objExample));
     });
@@ -65,7 +65,15 @@ const App = () => {
       console.log('test3');
       subscription.remove();
     };
+  };
+
+  useEffect(() => {
+    shake();
   }, []);
+
+  useEffect(() => {
+    shake();
+  }, [isShowLog]);
 
   return (
     <View style={styles.app}>

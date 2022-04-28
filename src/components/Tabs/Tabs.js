@@ -16,7 +16,7 @@ const Tabs = props => {
   const clearStyle = [styles.text, isClear && styles.focus];
 
   return (
-    <View style={styles.tabsContainer}>
+    <View>
       <View style={styles.tabs}>
         <TouchableOpacity
           style={styles.btn}
@@ -56,10 +56,8 @@ const styles = StyleSheet.create({
   focus: {
     fontWeight: '600',
   },
-  tabsContainer: {
-    flex: 1,
-  },
   text: {
+    fontSize: 15,
     color: 'black',
     textAlign: 'center',
   },

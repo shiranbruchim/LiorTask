@@ -68,7 +68,8 @@ const LogView = props => {
   };
 
   const clearHandle = () => {
-    logger.removelog();
+    // logger.removelog();
+    setLogData('');
     setIsShowSearch(false);
     setIsShowSendMail(false);
     setIsClear(true);
@@ -100,15 +101,15 @@ const LogView = props => {
         onSearch={onSearch}
         onSendClick={onSendClick}
       />
+      {(isShowSearch || isShowSendMail) && (
+        <View style={styles.showTabsInfo}>
+          {isShowSearch && <Search onSearch={onSearch} />}
+          {isShowSendMail && <SendMail onSendClick={onSendClick} />}
+        </View>
+      )}
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={styles.scroll}>
-        {(isShowSearch || isShowSendMail) && (
-          <View style={styles.showTabsInfo}>
-            {isShowSearch && <Search onSearch={onSearch} />}
-            {isShowSendMail && <SendMail onSendClick={onSendClick} />}
-          </View>
-        )}
         <View>
           <Text>{logDataNew || 'no logs'}</Text>
         </View>
@@ -130,12 +131,12 @@ const styles = StyleSheet.create({
     height: 80,
   },
   scroll: {
-    marginTop: 50,
+    marginTop: 20,
   },
   showTabsInfo: {
+    backgroundColor: 'white',
+    padding: 15,
+    marginTop: 20,
     borderWidth: 1,
-    padding: 20,
-    borderRadius: 2,
-    marginBottom: 20,
   },
 });

@@ -33,9 +33,6 @@ const SendMail = props => {
 export default SendMail;
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
   input: {
     borderRadius: 15,
     borderWidth: 1,

@@ -11,7 +11,7 @@ const Search = props => {
   };
 
   return (
-    <View style={styles.container}>
+    <View>
       <TextInput
         style={styles.input}
         onChangeText={onHandleChangeText}
@@ -25,9 +25,6 @@ const Search = props => {
 export default Search;
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
   input: {
     borderRadius: 15,
     borderWidth: 1,
