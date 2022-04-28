@@ -1,0 +1,31 @@
+{
+    "javascript.inlayHints.parameterNames.enabled": "all",
+    "typescript.inlayHints.parameterNames.enabled": "all",
+    "editor.tabSize": 2,
+    "editor.minimap.enabled": true,
+    "editor.renderWhitespace": "none",
+    "editor.renderControlCharacters": false,
+    "debug.inlineValues": true,
+    "eslint.alwaysShowStatus": true,
+    "javascript.referencesCodeLens.enabled": true,
+    "files.autoSave": "onFocusChange",
+    "files.eol": "\n",
+    "editor.suggestSelection": "first",
+    "files.exclude": {
+      "out/**": true
+    },
+    "eslint.workingDirectories": [
+      "src"
+    ],
+    "workbench.sideBar.location": "left",
+    "typescript.referencesCodeLens.enabled": true,
+    "eslint.validate":  [
+      "javascript", "typescript"
+    ],
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "jestrunner.codeLensSelector": "**/*.{test,spec,e2e-spec}.{js,jsx,ts,tsx}",
+    "jestrunner.configPath": "jest-e2e.json",
+    "jestrunner.runOptions": ["--detectOpenHandles", "--forceExit"]
+  }
