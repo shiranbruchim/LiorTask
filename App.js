@@ -58,7 +58,7 @@ const App = () => {
       console.log('test4');
       setIsShowLog(!isShowLog);
       console.log('test5');
-      console.log(JSON.stringify(objExample));
+      console.log(objExample);
     });
 
     return () => {
