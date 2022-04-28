@@ -36,11 +36,13 @@ const LogView = props => {
 
   const onSearch = value => {
     console.log('logData:', logData);
-    const afterFilter = logData.filter(x => {
-      const item = String(x).toLowerCase();
-      const valSearched = value.toLowerCase();
-      return item.includes(valSearched);
-    });
+    const afterFilter = logData
+      ? logData.filter(x => {
+          const item = String(x).toLowerCase();
+          const valSearched = value.toLowerCase();
+          return item.includes(valSearched);
+        })
+      : '';
     console.log(afterFilter);
     setLogDataNew(afterFilter);
   };
